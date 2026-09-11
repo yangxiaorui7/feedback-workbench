@@ -1,0 +1,15 @@
+# Render.com 免费部署配置
+# 访问 https://render.com 注册后，按以下步骤部署：
+# 1. New → Web Service
+# 2. 连接你的代码仓库（或上传此文件夹）
+# 3. 以下配置会自动识别
+
+services:
+  - type: web
+    name: feedback-workbench
+    env: node
+    buildCommand: ""
+    startCommand: node server.js
+    plan: free
+    healthCheckPath: /api/ping
+    autoDeploy: true
